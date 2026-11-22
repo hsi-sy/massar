@@ -389,8 +389,8 @@
     50%{ transform:translateY(-10px); }
   }
   @keyframes glow-breathe{
-    0%,100%{ filter:drop-shadow(0 8px 18px rgba(27,63,203,.22)); }
-    50%{ filter:drop-shadow(0 14px 30px rgba(124,168,255,.45)); }
+    0%,100%{ filter:var(--masar-logo-color-filter,opacity(1)) drop-shadow(0 8px 18px rgba(27,63,203,.22)); }
+    50%{ filter:var(--masar-logo-color-filter,opacity(1)) drop-shadow(0 14px 30px rgba(124,168,255,.45)); }
   }
   @media (max-width:960px){
     .hero-logo-img{ width:min(72%,320px); }
@@ -866,6 +866,8 @@
   html[data-theme="dark"] .masar-station{background:#111B32;border-color:#425477}
   html[data-theme="dark"] .masar-station.active{background:var(--c-royal);border-color:var(--c-royal)}
   html[data-theme="dark"] .masar-rail-track{background:#293752}
+  html[data-theme="dark"] .logo-img,html[data-theme="dark"] .float-shape img,html[data-theme="dark"] .footer-logo-img{filter:brightness(0) invert(1)}
+  html[data-theme="dark"] .hero-logo-img{--masar-logo-color-filter:brightness(0) invert(1);filter:brightness(0) invert(1)}
 
 </style>
 </head>
